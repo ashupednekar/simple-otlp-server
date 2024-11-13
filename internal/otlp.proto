@@ -1,10 +1,10 @@
 syntax = "proto3";
 
-option go_package = "github.com/ashupednekar/simple-otlp-server/internal/otlp";
-
-package otlp;
+package opentelemetry.proto.collector.trace.v1;
 
 import "opentelemetry/proto/trace/v1/trace.proto";
+
+option go_package = "opentelemetry/proto/collector/trace/v1;trace";
 
 message ExportTraceServiceRequest {
   repeated opentelemetry.proto.trace.v1.ResourceSpans resource_spans = 1;
@@ -12,6 +12,6 @@ message ExportTraceServiceRequest {
 
 message ExportTraceServiceResponse {}
 
-service TraceService { 
+service TraceService {
   rpc Export (ExportTraceServiceRequest) returns (ExportTraceServiceResponse);
 }

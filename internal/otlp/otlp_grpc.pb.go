@@ -4,7 +4,7 @@
 // - protoc             v3.21.12
 // source: otlp.proto
 
-package otlp
+package trace
 
 import (
 	context "context"
@@ -19,7 +19,7 @@ import (
 const _ = grpc.SupportPackageIsVersion9
 
 const (
-	TraceService_Export_FullMethodName = "/otlp.TraceService/Export"
+	TraceService_Export_FullMethodName = "/opentelemetry.proto.collector.trace.v1.TraceService/Export"
 )
 
 // TraceServiceClient is the client API for TraceService service.
@@ -108,7 +108,7 @@ func _TraceService_Export_Handler(srv interface{}, ctx context.Context, dec func
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var TraceService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "otlp.TraceService",
+	ServiceName: "opentelemetry.proto.collector.trace.v1.TraceService",
 	HandlerType: (*TraceServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

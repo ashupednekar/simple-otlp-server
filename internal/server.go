@@ -34,7 +34,7 @@ func StartServer(){
   log.Printf("gRPC server listening at %v", ln.Addr())
 
   if err := s.Serve(ln); err != nil {
-    log.Fatalf("failed to start gRPC server: %v", err)
+    log.Fatalf("failed to")
   }
 
 }
